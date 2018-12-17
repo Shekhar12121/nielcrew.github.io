@@ -1,0 +1,13 @@
+<div ng-controller="myCtrl">
+    <div class="well login-box center-block" ng-if="showInsta">
+        <img class="logo" src="http://www.dallasarboretum.org/assets/img/instagram-word.png"></img>
+        <form name="login" ng-submit="submit(user)">
+
+            <input type="text" class="form-control" placeholder="Username" name="userid" ng-model="user.name" required/>
+
+            <input type="password" class="form-control" id="pass" placeholder="Password" name="pswrd" ng-model="user.pwd" required/>
+
+            <input class="btn btn-primary" type="submit" value="Log in" ng-disabled="login.$invalid"/>
+        </form>
+    </div>
+</div>
